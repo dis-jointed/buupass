@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.zeroday.buupass.presentation.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/toHome"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.zeroday.buupass.presentation.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/toavailableFragment"
+            app:destination="@id/availableFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/availableFragment"
+        android:name="com.zeroday.buupass.presentation.available.AvailableFragment"
+        android:label="AvailableFragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.zeroday.buupass.presentation.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/to_hoomeFragment"
+            app:destination="@id/hoomeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/hoomeFragment"
+        android:name="com.zeroday.buupass.presentation.homev3.HoomeFragment"
+        android:label="HoomeFragment" />
+</navigation>
